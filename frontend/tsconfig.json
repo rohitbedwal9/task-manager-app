@@ -18,9 +18,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["frontend/src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "backend/src/routes/taskRoutes.ts", "backend/src/server.ts", "backend/src/models/task.ts", "backend/controllers/taskController.js"],
+  "include": ["frontend/next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "backend/src/routes/taskRoutes.ts", "backend/src/server.ts", "backend/src/models/task.ts", "backend/controllers/taskController.js"],
   "exclude": ["node_modules"]
 }

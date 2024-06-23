@@ -1,5 +1,4 @@
 import { Schema, model } from 'mongoose';
-import { version } from 'os';
 
 interface ITask {
   title: string;

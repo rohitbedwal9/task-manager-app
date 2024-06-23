@@ -3,10 +3,13 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import TasksSchema from './models/task'
 
+
 const app = express()
 app.use(express.json())
 app.use(cors())
-const url = "mongodb+srv://rohitbedwal9:1@cluster0.wjj0mer.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+const uri = process.env.MONGODB_URI || 'mongodb+srv://rohitbedwal9:1@cluster0.wjj0mer.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const port = process.env.PORT || 5000;
 
 app.get('/api/tasks', async (_, res) => {
   try {
@@ -17,7 +20,6 @@ app.get('/api/tasks', async (_, res) => {
       res.status(500).json({ error: error})
   }
 })
-
 
 app.post('/api/tasks', async (req, res) => {
   try {
@@ -56,10 +58,8 @@ app.delete('/api/tasks/:id', async (req, res) => {
   }
 })
 
-app.listen(5000, () => {
-  mongoose.connect(url)
+app.listen(port, () => {
+  mongoose.connect(uri)
       .then(() => console.log("mongoDB is connected"))
       .catch((e) => console.log(e.message))
-
-  console.log("express is working at localhost:5000")
 })

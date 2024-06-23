@@ -3,7 +3,7 @@ import TaskList from '../components/taskList';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { TaskType } from '../components/types';
-import AddTaskModal from '@/components/addTaskModal';
+import AddTaskModal from '../components/addTaskModal';
 
 const Home = () => {
   const [tasks, setTasks] = useState<TaskType[]>([]);
