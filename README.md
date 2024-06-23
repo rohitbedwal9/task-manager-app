@@ -1,3 +1,8 @@
+# frontend 
+    NextJs, Typescript, TailwindCss
+# backend
+    NodeJs, ExpressJs, MongoDB
+    
 # Installation
   # 1. Clone the repository
       git clone https://github.com/rohitbedwal9/task-manager-app.git
